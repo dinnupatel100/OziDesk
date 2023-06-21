@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HR Dashboard</title>
+	<link rel="stylesheet" href="static\css\master.css">
+	<link rel="stylesheet" href="static\css\master2.css">
+	<!-- Main Stylesheet -->
+	<link href="static\css\master_style.css" rel="stylesheet">
+	
+	<!--Favicon-->
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			background-color: #FF0043;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+
+		h1 {
+			margin: 0;
+			font-size: 36px;
+			font-weight: normal;
+		}
+
+		main {
+			padding: 20px;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		th, td {
+			border: 1px solid #ccc;
+			padding: 10px;
+			text-align: center;
+		}
+
+		th {
+			background-color: #FF0043;
+			color: #fff;
+			font-weight: normal;
+		}
+
+		a {
+			color: #FF0043;
+			text-decoration: none;
+		}
+
+		.accept-btn, .reject-btn {
+			background-color: #FF0043;
+			border: none;
+			color: #fff;
+			cursor: pointer;
+			padding: 10px 20px;
+			transition: background-color 0.3s;
+		}
+
+		.accept-btn:hover, .reject-btn:hover {
+			background-color: #FF0043;
+		}
+	</style>
+	<script>
+		// Add event listeners to the accept/reject buttons
+		const acceptBtns = document.querySelectorAll('.accept-btn');
+		const rejectBtns = document.querySelectorAll('.reject-btn');
+
+		acceptBtns.forEach((btn) => {
+			btn.addEventListener('click', (event) => {
+				// Update the row background color to green
+				event.target.closest('tr').style.backgroundColor = '#d4edda';
+			});
+		});
+
+		rejectBtns.forEach((btn) => {
+			btn.addEventListener('click', (event) => {
+				// Update the row background color to red
+				event.target.closest('tr').style.backgroundColor = '#f8d7da';
+			});
+		});
+	</script>
+</head>
+<body>
+	<nav class="navbar  navigation" role="navigation" aria-label="main navigation">
+		<div class="container">
+		   <div class="navbar-brand">
+			  <a class="navbar-item" href="index.html">
+				 <img class="img-fluid" src="static\images\logo.jpg" style="width:110px;height:110px;" alt="godocs" width="155px">
+			  </a>
+			  <h1> Ozidesk</h1>
+		
+			  <a role="button" class="navbar-burger burger" aria-expanded="false" data-target="navbar-links">
+				 <span aria-hidden="true"></span>
+				 <span aria-hidden="true"></span>
+				 <span aria-hidden="true"></span>
+			  </a>
+		   </div>
+		
+		   <div id="navbar-links" class="navbar-menu">
+			  
+		
+			  <div class="navbar-end ml-100">
+				 <div class="navbar-end ">
+					 <a class="navbar-item" href="/about">About Company</a>
+					
+					 <a class="navbar-item" href="/contact">Contact</a>
+				 </div> 
+			  </div>
+			  <div class="navbar-end ml-0">
+				 <div class="navbar-item py-0">
+					
+					<a href="/" class="btn btn-sm btn-primary ml-4">Logout</a>
+				 </div>
+			  </div>
+	 
+		   </div>
+		</div>
+	 </nav>
+	 
+	<main>
+		<table>
+			<thead>
+				<tr>
+					<th>Sr</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+					<th>Form Info</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Add your intern details dynamically using a server-side programming language or JavaScript -->
+
+				
+
+		{% for candidate in candidates %}
+				<tr>
+					<td>{{candidate[0]}}</td>
+					<td>{{candidate[3]}}</td>
+					<td>{{candidate[1]}}</td>
+					<td>{{candidate[4]}}</td>
+					<td><a href="{{url_for('view',id=candidate[0])}}" target="_blank">View</a></td>
+					<td>
+						
+						<a href="{{ url_for('accept', id=candidate[0]) }}"><i style="color: green;" type="button" class="fa fa-check tick"></i></a><a href="{{ url_for('accept', id=candidate[0]) }}"><i style="color: rgb(128, 0, 0);" type="button" class="fa fa-times cross"></i></a>
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</main>
+	<footer>
+		<!-- Add your footer content here -->
+	</footer>
+</body>
+</html>

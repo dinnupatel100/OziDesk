@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>OziDesk</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- theme meta -->
+  <meta name="theme-name" content="godocs-bulma" />
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- plugins -->
+  <link rel="stylesheet" href="static\css\master.css">
+  <link rel="stylesheet" href="static\css\master2.css">
+  <!-- Main Stylesheet -->
+  <link href="static\css\master_style.css" rel="stylesheet">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <style>
+     .label1{
+     
+    margin: 22px;
+     }
+     
+
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+::selection{
+  color: #fff;
+  background: #00C9A7;
+}
+
+.container{
+  width: 330px;
+  background: #12192c;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 30px 35px 10px 35px;
+}
+.container header{
+  font-size: 35px;
+  font-weight: 600;
+}
+.container .form-outer{
+  width: 100%;
+  overflow: hidden;
+}
+.container .form-outer form{
+  display: flex;
+  width: 400%;
+}
+.form-outer form .page{
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+.form-outer form .page .title{
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+}
+.form-outer form .page .field{
+  width: 330px;
+  height: 35px;
+  margin: 45px 0;
+  display: flex;
+  position: relative;
+}
+form .page .field .label{
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+}
+form .page .field input{
+  height: 100%;
+  width: 100%;
+  border: 5px solid #eee;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+form .field input:focus,
+form .field.valid input{
+  border-color: #00C9A7;
+}
+form .page .field select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+form .page .field button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #00C9A7;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .page .field button:hover{
+  background: #22E4AC;
+}
+
+form .page .btns button.prev{
+  margin-right: 3px;
+  font-size: 17px;
+}
+form .page .btns button.next{
+  margin-left: 3px;
+} */
+.container1{
+ 
+     background: #ff0043;
+   color: #fff;
+   text-align: center;
+   border-radius: 5px;
+   display: flex;
+   height: 91px;
+   width: 100%;
+   padding: 7px 35px 28px 35px;
+   margin-bottom: inherit;
+  
+}
+.container .progress-bar{
+  display: flex;
+  margin: 25px 0;
+  user-select: none;
+}
+.container .progress-bar .step{
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.container .progress-bar .step p{
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.progress-bar .step .bullet{
+  height: 25px;
+  width: 25px;
+  border: 2px solid #fff;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+.progress-bar .step .bullet.active{
+  border-color: #12192c;
+  background: #00C9A7;
+}
+.progress-bar .step .bullet span{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progress-bar .step .bullet.active span{
+  display: none;
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after{
+  position: absolute;
+  content: '';
+  bottom: 11px;
+  right: -51px;
+  height: 3px;
+  width: 44px;
+  /*background: #262626;*/
+}
+.progress-bar .step .bullet.active:after{
+  background: #00C9A7;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+  display: none;
+}
+.progress-bar .step p.active{
+  color: #00C9A7;
+  transition: 0.2s linear;
+}
+.progress-bar .step .check{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progress-bar .step .check.active{
+  display: block;
+  color: #fff;
+}
+.credit{
+    text-align: center;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.credit a{
+    text-decoration: none;
+    color: #00C9A7;
+    font-weight: bold;
+} 
+
+.step{
+   display: inline-block;
+    margin: 0px 67px 0px 0px;
+}
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar  navigation" role="navigation" aria-label="main navigation">
+   <div class="container">
+      <div class="navbar-brand">
+         <a class="navbar-item" href="index.html">
+            <img class="img-fluid" src="static\images\logo.jpg" style="width:110px;height:110px;" alt="godocs" width="155px">
+         </a>
+         <h1> Ozidesk</h1>
+   
+         <a role="button" class="navbar-burger burger" aria-expanded="false" data-target="navbar-links">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+         </a>
+      </div>
+   
+      <div id="navbar-links" class="navbar-menu">
+         
+   
+         <div class="navbar-end ml-100">
+            <div class="navbar-end ">
+                <a class="navbar-item" href="/about">About Company</a>
+                <a class="navbar-item" href="/internships">Internships</a>
+                <a class="navbar-item" href="/contact">Contact</a>
+            </div> 
+         </div>
+         <div class="navbar-end ml-0">
+            <div class="navbar-item py-0">
+               
+               <a href="#" class="btn btn-sm btn-primary ml-4">Logout</a>
+            </div>
+         </div>
+
+      </div>
+   </div>
+</nav>
+
+<form class="form" action="/success" method="POST">
+    <h4 style="text-align: center;margin-bottom:20px;margin-top:20px;">HOTS Questions</h4>
+
+    <div class="container1" >
+      <div style="margin-left: 250px;" class="progress-bar">
+        <div class="step">
+           <p>
+              Round 1
+           </p>
+           <div     style="background: red;" class="bullet">
+              <span>1</span>
+           </div>
+           <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+           <p>
+              Round 2
+           </p>
+           <div style="background: red;" class="bullet">
+              <span>2</span>
+           </div>
+           <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+           <p>
+             Interview
+          </p>
+           <div class="bullet">
+              <span>3</span>
+           </div>
+           <div class="check fas fa-check"></div>
+        </div>
+       
+     </div>
+  </div>
+    <div class="maincontainer">
+       
+            <div class="main">
+               
+
+         {% for question in questions %}
+        
+ 
+         <label for="ozibook"> {{question[1]}}        </label><br/>
+         <input type="text" name="{{question[3]}}" id="{{question[4]}}"></input><br/>
+
+         {% endfor %}
+         
+
+            </div>
+        
+    
+    </div>
+
+<input type="Submit" name="mcq" id="mcq" value="Submit">
+ </form>

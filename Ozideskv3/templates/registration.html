@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ozidesk</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- plugins -->
+  <link rel="stylesheet" href="static\css\master.css">
+  <link rel="stylesheet" href="static\css\master2.css">
+  <!-- Main Stylesheet -->
+  <link href="static\css\master_style.css" rel="stylesheet">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <script>
+      function Validate() {
+
+         var mobile = document.getElementById("mobile").value;
+         var email = document.getElementById("email").value;
+         var pass = document.getElementById("password").value;
+         var confirmpass = document.getElementById("confirmpassword").value;
+         var flag =0;
+         //$('#check').hide();
+         if (mobile.length != 10) {
+            document.getElementById("mobileval").innerHTML = "Mobile number must be 10 digit";
+            flag=1;
+         }
+         else {
+            $('#mobileval').hide();
+         }
+         if (!(email.indexOf("@gmail.com") >= 0)) {
+            document.getElementById("emailval").innerHTML = "Enter correct email";
+            flag=1;
+         }
+         else {
+            $('#emailval').hide();
+         }
+         if (pass.length < 8) {
+            document.getElementById("passval").innerHTML = "Password must contain 8-16 characters";
+            flag=1;
+         }
+         else {
+            $('#passval').hide();
+         }
+         if (pass != confirmpass) {
+            document.getElementById("confirmval").innerHTML = "Password not matched";
+            flag=1;
+         }
+         else {
+            $('#confirmval').hide();
+         }
+         
+         if(flag==0){
+            document.getElementById("check").value = "Helo";
+         }
+      
+      }
+
+   </script>
+
+   <nav class="navbar is-sticky-top navigation" role="navigation" aria-label="main navigation">
+      <div class="container">
+         <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+               <img class="img-fluid" src="static\images\logo.jpg" style="width:110px;height:110px;" alt="godocs" width="155px">
+            </a>
+            <h1> Ozidesk</h1>
+      
+            <a role="button" class="navbar-burger burger" aria-expanded="false" data-target="navbar-links">
+               <span aria-hidden="true"></span>
+               <span aria-hidden="true"></span>
+               <span aria-hidden="true"></span>
+            </a>
+         </div>
+      
+         <div id="navbar-links" class="navbar-menu">
+            <div class="navbar-start ml-auto">
+               <a class="navbar-item" href="/about">About Company</a>
+               <a class="navbar-item" href="/internships">Internships</a>
+               <a class="navbar-item" href="/contact">Contact</a>
+            </div> 
+      
+            <div class="navbar-end ml-0">
+               <div class="navbar-item py-0">
+                  <a href="/loginrender" class="btn btn-sm btn-outline-primary ml-4">LogIn</a>
+                  <a href="/registeration" class="btn btn-sm btn-primary ml-4">Register</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+<section class="section">
+   <div class="container">
+      <div class="columns is-desktop is-justify-content-center">
+         <div class="column is-8-desktop">
+            <div class="p-6 shadow rounded content">
+               <h2 class="section-title" style="text-align: center;margin-bottom:40px;">Registration</h2>
+               <form action="/register" method= "POST">
+                  <div class="columns is-multiline">
+                     <div class="form-group column is-6-desktop">
+                        <label for="name">Name</label>
+                        <input type="text" class="input" id="name" name="name" placeholder="Your Name"
+                           required>
+                    </div>
+                    <div class="form-group column is-6-desktop">
+                        <label for="mobile">Mobile</label>
+                        <input type="text" class="input" id="mobile" name="mobile" placeholder="Your Mobile Number"
+                           required>
+                        <p id="mobileval" class="val" style="color:red;font-size:small;"></p>
+                    </div>
+                    <div class="form-group column is-12">
+                        <label for="email">Email</label>
+                        <input type="email" class="input" id="email" name="email" placeholder="Your Email Address"
+                           required>
+                        <p id="emailval" class="val" style="color:red;font-size:small;"></p>
+                     </div>
+                     <div class="form-group column is-12">
+                        <label for="qualification">Qualification</label>
+                        <input type="text" class="input" id="qualification" name="qualification" placeholder="Your Qualification"
+                           required>
+                     </div>
+                     <div class="form-group column is-6-desktop">
+                        <label for="city">City</label>
+                        <input type="text" class="input" id="city" name="city" placeholder="Your City"
+                           required>
+                    </div>
+                    <div class="form-group column is-6-desktop">
+                     <label for="state">State</label>
+                     <input type="text" class="input" id="state" name="state" placeholder="Your State"
+                        required>
+                 </div>
+                 <div class="form-group column is-6-desktop">
+                  <label for="password">Password</label>
+                  <input type="password" class="input" id="password" name="password">
+                  <p id="passval" class="val" style="color:red;font-size:small;"></p>
+               </div>
+                 <div class="form-group column is-6-desktop">
+                  <label for="country">Country</label>
+                  <input type="text" class="input" id="country" name="country" placeholder="Your Country"
+                     required>
+              </div>
+
+                     
+                     <div class="form-group column is-6-desktop">
+                        <label for="confirmpassword">Confirm Password</label>
+                        <input type="password" class="input" id="confirmpassword" name="confirmpassword">
+                        <p id="confirmval" class="val" style="color:red;font-size:small;"></p>
+                     </div>
+
+                     <div class="form-group column is-6-desktop">
+                        <label for="source">Source</label>
+                        </br>
+                        <!--<select >
+                           <option>Select Source</option>
+                           <option>LinkedIn</option>
+                           <option>Advertisement</option>
+                           <option>Friend</option>
+                           <option>Other</option>
+                        </select>
+                        <hr>-->
+                        
+                        <input type="text" class="input" id="source" name="source" placeholder=""
+                           required>
+                    </div>
+                    <div class="form-group column is-6-desktop">
+                     <label for="linkedin">LinkedIn</label>
+                     <input type="text" class="input" id="linkedin" name="linkedin" placeholder=""
+                        required>
+                 </div>
+
+                     <input type="hidden" id="check" required>
+   
+                     
+                     <div class="column is-12">
+                        <button type="submit" class="btn btn-primary" onclick="Validate()">Register</button>
+                        <hr>
+                        <p class="message">Have an Account?  <a href="/loginrender">Login</a></p>
+                   
+              
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+<footer>
+   <div class="container">
+      <div class="columns is-multiline is-align-items-center border-bottom py-5">
+         <div class="column is-4-desktop is-12-tablet">
+            <ul class="list-inline footer-menu has-text-centered has-text-left-desktop">
+               <li class="list-inline-item"><a href="changelog.html">Home</a></li>
+               <li class="list-inline-item"><a href="contact.html">contact</a></li>
+               <li class="list-inline-item"><a href="search.html">Search</a></li>
+            </ul>
+         </div>
+         <div class="column is-4-desktop is-12-tablet">
+            <a class="navbar-brand is-justify-content-center" href="index.html">
+            </a>
+         </div> <!--
+         <div class="column is-4-desktop is-12-tablet">
+            <ul class="list-inline social-icons has-text-right-desktop has-text-centered">
+               <li class="list-inline-item"><a href="#"><i class="ti-facebook"></i></a></li>
+               <li class="list-inline-item"><a href="#"><i class="ti-twitter-alt"></i></a></li>
+               <li class="list-inline-item"><a href="#"><i class="ti-github"></i></a></li>
+               <li class="list-inline-item"><a href="#"><i class="ti-linkedin"></i></a></li>
+            </ul>
+         </div> -->
+      </div>
+      <div class="py-4 has-text-centered">
+         <small class="text-light">Ozibook -- Ozigen </a></small>
+      </div>
+   </div>
+</footer>
+
+<!-- plugins -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<script src="plugins/masonry/masonry.min.js"></script>
+<script src="plugins/clipboard/clipboard.min.js"></script>
+<script src="plugins/match-height/jquery.matchHeight-min.js"></script>
+
+<!-- Main Script -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
